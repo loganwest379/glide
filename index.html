@@ -33,7 +33,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative h-screen flex items-center justify-center">
+    <div class="relative h-[80vh] flex flex-col justify-center items-center">
         <!-- Background Image -->
         <div class="absolute inset-0">
             <img src="https://images.unsplash.com/photo-1485594050903-8e8ee7b071a8" alt="Skiing mountain landscape" class="w-full h-full object-cover">
@@ -41,7 +41,19 @@
         </div>
         <!-- Hero Content -->
         <div class="relative z-10 text-center px-4">
-            <h1 class="text-7xl font-extrabold text-white text-center">Provo's fastest ski wax. <span class="text-blue-400"><span id="typed-text"></span></span></h1>
+            <h1 class="text-6xl md:text-7xl font-extrabold leading-tight text-white mb-6" style="min-height: 100px;">
+                <span id="typed-text"></span>
+            </h1>
+            
+            <p class="text-lg max-w-xl mx-auto text-gray-200">
+                Fast, local ski service — no shop hassle, just smooth runs.
+            </p>
+            
+            <div class="mt-10">
+                <a href="https://app.squareup.com/appointments/book/sgfj0zrcqxj55r/LND4H5V6HW657/start" target="_blank" class="inline-block bg-teal-700 hover:bg-teal-800 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition-colors">
+                    Schedule Now
+                </a>
+            </div>
         </div>
     </div>
 
@@ -56,7 +68,7 @@
                     <div class="absolute inset-0 bg-black/50"></div>
                     <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
                         <h3 class="text-3xl font-bold">Quick Wax</h3>
-                        <p class="text-xl mt-2">$15.00</p>
+                        <p class="text-xl mt-2">$10.00</p>
                     </div>
                 </div>
             </a>
@@ -67,7 +79,7 @@
                     <div class="absolute inset-0 bg-black/50"></div>
                     <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
                         <h3 class="text-3xl font-bold">Hot Wax</h3>
-                        <p class="text-xl mt-2">$35.00</p>
+                        <p class="text-xl mt-2">$15.00</p>
                     </div>
                 </div>
             </a>
@@ -78,7 +90,7 @@
                     <div class="absolute inset-0 bg-black/50"></div>
                     <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
                         <h3 class="text-3xl font-bold">Edge & Wax</h3>
-                        <p class="text-xl mt-2">$55.00</p>
+                        <p class="text-xl mt-2">$25.00</p>
                     </div>
                 </div>
             </a>
@@ -89,7 +101,29 @@
                     <div class="absolute inset-0 bg-black/50"></div>
                     <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
                         <h3 class="text-3xl font-bold">Pro Tune</h3>
-                        <p class="text-xl mt-2">$95.00</p>
+                        <p class="text-xl mt-2">$55.00</p>
+                    </div>
+                </div>
+            </a>
+            <!-- Card 5 -->
+            <a href="season-pass.html" class="block transition-transform duration-300 hover:scale-105">
+                <div class="relative flex-shrink-0 w-80 h-96 rounded-2xl overflow-hidden shadow-lg">
+                    <img src="images/season-pass.jpg" alt="Season Pass" class="w-full h-full object-cover" style="object-position: 70% center;">
+                    <div class="absolute inset-0 bg-black/50"></div>
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-white p-4 text-center">
+                        <h3 class="text-3xl font-bold">Season Pass</h3>
+                        <p class="text-xl mt-2">$55.00</p>
+                    </div>
+                </div>
+            </a>
+            <!-- Card 6 -->
+            <a href="ski-buddy-pass.html" class="block transition-transform duration-300 hover:scale-105">
+                <div class="relative flex-shrink-0 w-80 h-96 rounded-2xl overflow-hidden shadow-lg">
+                    <img src="images/couples-pass.jpg" alt="Ski Buddy Pass" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50"></div>
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-white p-4 text-center">
+                        <h3 class="text-3xl font-bold">Ski Buddy Pass</h3>
+                        <p class="text-xl mt-2">$45.00</p>
                     </div>
                 </div>
             </a>
@@ -239,35 +273,84 @@
                 <img src="images/venmo-qr.png" alt="Venmo QR Code" class="w-48 h-48 rounded-lg mx-auto">
             </div>
         </div>
+        <div class="relative z-10 max-w-xl mx-auto mt-16 px-8">
+            <h3 class="text-3xl font-bold text-center text-white mb-6">Or Send a Quick Message</h3>
+            <form name="contact" method="POST" data-netlify="true" class="space-y-4">
+                <input type="hidden" name="form-name" value="contact" />
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-200">Your Name</label>
+                    <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md border border-gray-600 bg-gray-700/50 px-3 py-2 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-200">Your Email</label>
+                    <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border border-gray-600 bg-gray-700/50 px-3 py-2 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-200">Question or Request</label>
+                    <textarea name="message" id="message" rows="4" required class="mt-1 block w-full rounded-md border border-gray-600 bg-gray-700/50 px-3 py-2 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                </div>
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-teal-700 hover:bg-teal-800 text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors shadow-lg">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script>
-        var options = {
-            strings: ['With pick-up.', 'And drop-off.', 'Made easy.'],
-            typeSpeed: 60,
-            backSpeed: 40,
-            backDelay: 1500,
-            loop: false,
-            onComplete: (self) => {
-                setTimeout(() => {
-                    const staticText = 'Provo\'s fastest ski wax. '; // Escaped apostrophe
-                    const typingSpanContainer = self.el.parentElement; // The blue span
-                    const h1Element = typingSpanContainer.parentElement; // The H1
-
-                    // Reset H1 content to prepare for final word
-                    h1Element.innerHTML = staticText + '<span class="text-blue-400"><span id="final-word"></span></span>';
-
-                    // Initialize a new Typed instance for the final word
-                    new Typed('#final-word', {
-                        strings: ['Glide.'],
-                        typeSpeed: 80,
-                        showCursor: false // Hide cursor for the final static word
-                    });
-                }, 1500); // Wait 1.5 seconds after loop finishes before typing final word
+      var options = {
+        strings: [
+          'Faster runs.', 
+          'Smoother turns.', 
+          'Zero shop hassle.',
+          'Pickup & drop-off.'
+        ],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 1500,
+        loop: false, // We will not loop forever
+        showCursor: true,
+        cursorChar: '|',
+        
+        // This function runs after the list is typed once
+        onComplete: (self) => {
+          setTimeout(() => {
+            // Find the h1 and clear it
+            const h1 = document.querySelector('#typed-text').parentElement;
+            if (h1) {
+              h1.innerHTML = '<span id="final-word"></span>'; // Replace with new span
+            
+              // Start a new Typed instance for the final word "Glide."
+              new Typed('#final-word', {
+                strings: ['Glide.'],
+                typeSpeed: 100,
+                loop: false,
+                showCursor: false // Hide cursor for the final static word
+              });
             }
-        };
+          }, 1500); // Wait 1.5 seconds after list finishes before typing "Glide."
+        }
+      };
+      
+      var typed = new Typed('#typed-text', options);
+    </script>
+    <script>
+      // Observer for simple fade-in sections
+      const sections = document.querySelectorAll('.fade-in-section');
+      const sectionObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            sectionObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
 
-        var typed = new Typed('#typed-text', options);
+      sections.forEach(section => {
+        sectionObserver.observe(section);
+      });
+
     </script>
 </body>
 </html>
